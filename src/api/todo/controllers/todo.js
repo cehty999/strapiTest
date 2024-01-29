@@ -14,14 +14,19 @@ module.exports = createCoreController('api::todo.todo', ({ strapi }) => ({
 
         var users = await strapi.entityService.findMany('plugin::users-permissions.user');
 
+        console.log(users)
+        
         users.forEach(user => {
+            console.log(user.fcm)
             strapi.notification.sendNotification(user.fcm, {
                 notification: {
-                    title: `Liked your quote`,
-                    body: `Liked your quote`
+                    title: "Liked your quote",
+                    body: "Liked your quote"
                 }
             });
         });
+
+
         
         // ctx.body = result;
     }
