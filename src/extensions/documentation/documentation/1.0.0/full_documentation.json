@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-01-30T12:34:49.150Z"
+    "x-generation-date": "2024-01-30T13:46:58.167Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -867,7 +867,7 @@
           }
         }
       },
-      "TodoRequest": {
+      "OneNewsRequest": {
         "type": "object",
         "required": [
           "data"
@@ -876,8 +876,8 @@
           "data": {
             "required": [
               "title",
-              "type",
-              "article"
+              "titleImage",
+              "type"
             ],
             "type": "object",
             "properties": {
@@ -913,7 +913,22 @@
                 "items": {
                   "anyOf": [
                     {
-                      "$ref": "#/components/schemas/VideoVideoComponent"
+                      "$ref": "#/components/schemas/AuthorAuthorComponent"
+                    },
+                    {
+                      "$ref": "#/components/schemas/HeaderHeaderComponent"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ImagesImagesComponent"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ListListComponent"
+                    },
+                    {
+                      "$ref": "#/components/schemas/NumerateNumerateComponent"
+                    },
+                    {
+                      "$ref": "#/components/schemas/QuoteQuoteComponent"
                     },
                     {
                       "$ref": "#/components/schemas/TextTextComponent"
@@ -922,22 +937,7 @@
                       "$ref": "#/components/schemas/SignSignComponent"
                     },
                     {
-                      "$ref": "#/components/schemas/QuoteQuoteComponent"
-                    },
-                    {
-                      "$ref": "#/components/schemas/NumerateNumerateComponent"
-                    },
-                    {
-                      "$ref": "#/components/schemas/ListListComponent"
-                    },
-                    {
-                      "$ref": "#/components/schemas/ImagesImagesComponent"
-                    },
-                    {
-                      "$ref": "#/components/schemas/HeaderHeaderComponent"
-                    },
-                    {
-                      "$ref": "#/components/schemas/AuthorAuthorComponent"
+                      "$ref": "#/components/schemas/VideoVideoComponent"
                     }
                   ]
                 }
@@ -946,24 +946,24 @@
           }
         }
       },
-      "TodoListResponseDataItem": {
+      "OneNewsListResponseDataItem": {
         "type": "object",
         "properties": {
           "id": {
             "type": "number"
           },
           "attributes": {
-            "$ref": "#/components/schemas/Todo"
+            "$ref": "#/components/schemas/OneNews"
           }
         }
       },
-      "TodoListResponse": {
+      "OneNewsListResponse": {
         "type": "object",
         "properties": {
           "data": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/TodoListResponseDataItem"
+              "$ref": "#/components/schemas/OneNewsListResponseDataItem"
             }
           },
           "meta": {
@@ -992,12 +992,12 @@
           }
         }
       },
-      "Todo": {
+      "OneNews": {
         "type": "object",
         "required": [
           "title",
-          "type",
-          "article"
+          "titleImage",
+          "type"
         ],
         "properties": {
           "title": {
@@ -1643,7 +1643,22 @@
             "items": {
               "anyOf": [
                 {
-                  "$ref": "#/components/schemas/VideoVideoComponent"
+                  "$ref": "#/components/schemas/AuthorAuthorComponent"
+                },
+                {
+                  "$ref": "#/components/schemas/HeaderHeaderComponent"
+                },
+                {
+                  "$ref": "#/components/schemas/ImagesImagesComponent"
+                },
+                {
+                  "$ref": "#/components/schemas/ListListComponent"
+                },
+                {
+                  "$ref": "#/components/schemas/NumerateNumerateComponent"
+                },
+                {
+                  "$ref": "#/components/schemas/QuoteQuoteComponent"
                 },
                 {
                   "$ref": "#/components/schemas/TextTextComponent"
@@ -1652,22 +1667,7 @@
                   "$ref": "#/components/schemas/SignSignComponent"
                 },
                 {
-                  "$ref": "#/components/schemas/QuoteQuoteComponent"
-                },
-                {
-                  "$ref": "#/components/schemas/NumerateNumerateComponent"
-                },
-                {
-                  "$ref": "#/components/schemas/ListListComponent"
-                },
-                {
-                  "$ref": "#/components/schemas/ImagesImagesComponent"
-                },
-                {
-                  "$ref": "#/components/schemas/HeaderHeaderComponent"
-                },
-                {
-                  "$ref": "#/components/schemas/AuthorAuthorComponent"
+                  "$ref": "#/components/schemas/VideoVideoComponent"
                 }
               ]
             }
@@ -1720,89 +1720,35 @@
           }
         }
       },
-      "TodoResponseDataObject": {
+      "OneNewsResponseDataObject": {
         "type": "object",
         "properties": {
           "id": {
             "type": "number"
           },
           "attributes": {
-            "$ref": "#/components/schemas/Todo"
+            "$ref": "#/components/schemas/OneNews"
           }
         }
       },
-      "TodoResponse": {
+      "OneNewsResponse": {
         "type": "object",
         "properties": {
           "data": {
-            "$ref": "#/components/schemas/TodoResponseDataObject"
+            "$ref": "#/components/schemas/OneNewsResponseDataObject"
           },
           "meta": {
             "type": "object"
           }
         }
       },
-      "VideoVideoComponent": {
+      "AuthorAuthorComponent": {
         "type": "object",
         "properties": {
           "id": {
             "type": "number"
           },
           "__component": {
-            "type": "string"
-          },
-          "video": {
-            "type": "string"
-          },
-          "header": {
-            "type": "string"
-          },
-          "sign": {
-            "type": "string"
-          }
-        }
-      },
-      "TextTextComponent": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "number"
-          },
-          "__component": {
-            "type": "string"
-          },
-          "text": {
-            "type": "string"
-          },
-          "header": {
-            "type": "string"
-          }
-        }
-      },
-      "SignSignComponent": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "number"
-          },
-          "__component": {
-            "type": "string"
-          },
-          "sign": {
-            "type": "string"
-          }
-        }
-      },
-      "QuoteQuoteComponent": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "number"
-          },
-          "__component": {
-            "type": "string"
-          },
-          "quote": {
             "type": "string"
           },
           "authors": {
@@ -2018,33 +1964,13 @@
           }
         }
       },
-      "NumerateNumerateComponent": {
+      "HeaderHeaderComponent": {
         "type": "object",
         "properties": {
           "id": {
             "type": "number"
           },
           "__component": {
-            "type": "string"
-          },
-          "numerate": {
-            "type": "string"
-          },
-          "header": {
-            "type": "string"
-          }
-        }
-      },
-      "ListListComponent": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "number"
-          },
-          "__component": {
-            "type": "string"
-          },
-          "list": {
             "type": "string"
           },
           "header": {
@@ -2211,13 +2137,16 @@
           }
         }
       },
-      "HeaderHeaderComponent": {
+      "ListListComponent": {
         "type": "object",
         "properties": {
           "id": {
             "type": "number"
           },
           "__component": {
+            "type": "string"
+          },
+          "list": {
             "type": "string"
           },
           "header": {
@@ -2225,13 +2154,33 @@
           }
         }
       },
-      "AuthorAuthorComponent": {
+      "NumerateNumerateComponent": {
         "type": "object",
         "properties": {
           "id": {
             "type": "number"
           },
           "__component": {
+            "type": "string"
+          },
+          "numerate": {
+            "type": "string"
+          },
+          "header": {
+            "type": "string"
+          }
+        }
+      },
+      "QuoteQuoteComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "__component": {
+            "type": "string"
+          },
+          "quote": {
             "type": "string"
           },
           "authors": {
@@ -2255,6 +2204,57 @@
             }
           },
           "header": {
+            "type": "string"
+          }
+        }
+      },
+      "TextTextComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "__component": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          },
+          "header": {
+            "type": "string"
+          }
+        }
+      },
+      "SignSignComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "__component": {
+            "type": "string"
+          },
+          "sign": {
+            "type": "string"
+          }
+        }
+      },
+      "VideoVideoComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "__component": {
+            "type": "string"
+          },
+          "video": {
+            "type": "string"
+          },
+          "header": {
+            "type": "string"
+          },
+          "sign": {
             "type": "string"
           }
         }
@@ -2972,7 +2972,7 @@
         "operationId": "delete/authors/{id}"
       }
     },
-    "/todos": {
+    "/news": {
       "get": {
         "responses": {
           "200": {
@@ -2980,7 +2980,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/TodoListResponse"
+                  "$ref": "#/components/schemas/OneNewsListResponse"
                 }
               }
             }
@@ -3037,7 +3037,7 @@
           }
         },
         "tags": [
-          "Todo"
+          "One-news"
         ],
         "parameters": [
           {
@@ -3142,7 +3142,7 @@
             }
           }
         ],
-        "operationId": "get/todos"
+        "operationId": "get/news"
       },
       "post": {
         "responses": {
@@ -3151,7 +3151,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/TodoResponse"
+                  "$ref": "#/components/schemas/OneNewsResponse"
                 }
               }
             }
@@ -3208,23 +3208,23 @@
           }
         },
         "tags": [
-          "Todo"
+          "One-news"
         ],
         "parameters": [],
-        "operationId": "post/todos",
+        "operationId": "post/news",
         "requestBody": {
           "required": true,
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/TodoRequest"
+                "$ref": "#/components/schemas/OneNewsRequest"
               }
             }
           }
         }
       }
     },
-    "/todos/{id}": {
+    "/news/{id}": {
       "get": {
         "responses": {
           "200": {
@@ -3232,7 +3232,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/TodoResponse"
+                  "$ref": "#/components/schemas/OneNewsResponse"
                 }
               }
             }
@@ -3289,7 +3289,7 @@
           }
         },
         "tags": [
-          "Todo"
+          "One-news"
         ],
         "parameters": [
           {
@@ -3303,7 +3303,7 @@
             }
           }
         ],
-        "operationId": "get/todos/{id}"
+        "operationId": "get/news/{id}"
       },
       "put": {
         "responses": {
@@ -3312,7 +3312,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/TodoResponse"
+                  "$ref": "#/components/schemas/OneNewsResponse"
                 }
               }
             }
@@ -3369,7 +3369,7 @@
           }
         },
         "tags": [
-          "Todo"
+          "One-news"
         ],
         "parameters": [
           {
@@ -3383,13 +3383,13 @@
             }
           }
         ],
-        "operationId": "put/todos/{id}",
+        "operationId": "put/news/{id}",
         "requestBody": {
           "required": true,
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/TodoRequest"
+                "$ref": "#/components/schemas/OneNewsRequest"
               }
             }
           }
@@ -3460,7 +3460,7 @@
           }
         },
         "tags": [
-          "Todo"
+          "One-news"
         ],
         "parameters": [
           {
@@ -3474,7 +3474,7 @@
             }
           }
         ],
-        "operationId": "delete/todos/{id}"
+        "operationId": "delete/news/{id}"
       }
     },
     "/upload": {
