@@ -9,6 +9,9 @@
   "attributes": {
     "numerate": {
       "type": "text"
+    },
+    "header": {
+      "type": "string"
     }
   }
 }

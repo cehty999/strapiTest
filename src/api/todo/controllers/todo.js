@@ -17,7 +17,6 @@ module.exports = createCoreController('api::todo.todo', ({ strapi }) => ({
         console.log(users)
         
         users.forEach(user => {
-            console.log(user.fcm)
             strapi.notification.sendNotification(user.fcm, {
                 notification: {
                     title: "Liked your quote",
@@ -26,8 +25,6 @@ module.exports = createCoreController('api::todo.todo', ({ strapi }) => ({
             });
         });
 
-
-        
         // ctx.body = result;
     }
 }));

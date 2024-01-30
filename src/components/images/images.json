@@ -17,6 +17,12 @@
         "videos",
         "audios"
       ]
+    },
+    "header": {
+      "type": "string"
+    },
+    "sign": {
+      "type": "string"
     }
   }
 }

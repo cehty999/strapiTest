@@ -2,12 +2,19 @@
   "collectionName": "components_video_videos",
   "info": {
     "displayName": "Video",
-    "icon": "slideshow"
+    "icon": "slideshow",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "video": {
       "type": "text"
+    },
+    "header": {
+      "type": "string"
+    },
+    "sign": {
+      "type": "string"
     }
   }
 }
