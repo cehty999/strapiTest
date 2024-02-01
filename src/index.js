@@ -1,7 +1,10 @@
-    // ./src/index.js
-    'use strict';
-    var admin = require("firebase-admin");
-    var serviceAccount = require("./r10-project-test-firebase-adminsdk-t0yz6-7bdc8c8018.json");
+// ./src/index.js
+'use strict';
+
+var admin = require("firebase-admin");
+
+var serviceAccount = require("./r10key.json");
+
     module.exports = {
       /**
        * An asynchronous register function that runs before
