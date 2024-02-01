@@ -31,15 +31,6 @@
         "audios"
       ]
     },
-    "type": {
-      "type": "enumeration",
-      "enum": [
-        "Прогнозы",
-        "Кейсы",
-        "Интервью"
-      ],
-      "required": true
-    },
     "article": {
       "type": "dynamiczone",
       "components": [
@@ -53,6 +44,11 @@
         "sign.sign",
         "video.video"
       ]
+    },
+    "type": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::type.type"
     }
   }
 }
