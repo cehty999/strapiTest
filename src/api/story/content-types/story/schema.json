@@ -4,8 +4,7 @@
   "info": {
     "singularName": "story",
     "pluralName": "stories",
-    "displayName": "Story",
-    "description": ""
+    "displayName": "Story"
   },
   "options": {
     "draftAndPublish": true
@@ -13,26 +12,25 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "previewImage": {
-      "type": "media",
-      "multiple": true,
-      "required": true,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ]
+      ],
+      "type": "media",
+      "multiple": true
     },
     "items": {
       "type": "dynamiczone",
       "components": [
         "image.image",
         "video.video-item"
-      ]
+      ],
+      "required": false
     }
   }
 }

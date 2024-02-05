@@ -1,8 +1,7 @@
 {
-  "collectionName": "components_video_item_video_items",
+  "collectionName": "components_video_video_items",
   "info": {
     "displayName": "videoItem",
-    "description": "",
     "icon": "slideshow"
   },
   "options": {},
