@@ -942,9 +942,6 @@
                   }
                 ],
                 "example": "string or id"
-              },
-              "newsId": {
-                "type": "string"
               }
             }
           }
@@ -1867,9 +1864,6 @@
                 }
               }
             }
-          },
-          "newsId": {
-            "type": "string"
           },
           "createdAt": {
             "type": "string",

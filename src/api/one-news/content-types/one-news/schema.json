@@ -49,9 +49,6 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::type.type"
-    },
-    "newsId": {
-      "type": "uid"
     }
   }
 }
